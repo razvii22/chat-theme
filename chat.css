@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@300&family=Sniglet&display=swap');
+* {
+     box-sizing: border-box;
+}
+/**Above is a custom font I've imported via Google Fonts! Feel free to import your own similarly!**/
+ :root {
+     --fontFAMILY: 'Sniglet';
+    /**change this to change the font family!**/
+}
+ html, body {
+     height: 100%;
+     overflow: hidden;
+}
+ body {
+     text-shadow: 0 0 1px #000, 0 0 2px #000;
+     background: transparent;
+     font-family: 'Roboto';
+     font-weight: 700;
+     font-size: {font_size};
+     line-height: 1.5em;
+     color: {text_color};
+}
+ #log>div {
+     animation: fadeInRight 0.5s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+     -webkit-animation: fadeInRight 0.5s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+}
+ .colon {
+     display: none;
+}
+ #log {
+     position: absolute;
+     bottom: 0;
+     padding: 20px 20px 0px 20px;
+     width: 100%;
+  	padding-right:10px;
+}
+ #log>div {
+	text-align:right;
+}
+ #log>div.deleted {
+     visibility: hidden;
+}
+ #log .emote {
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: contain;
+     padding: 0.4em 0.2em;
+     position: relative;
+}
+ #log .emote img {
+     display: inline-block;
+     height: 1em;
+     opacity: 0;
+}
+ #log .message,#log .meta {
+     vertical-align: top;
+}
+ #log .meta {
+		position: absolute;
+    right: 0;
+    top: 0.25em;
+    width: max-content;
+    text-align: left;
+    padding: 0.3em 0.7em 0.3em 0.7em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background-color: hsl(0, 0%, 10%);
+    font-family: var(--fontFAMILY);
+    letter-spacing: 2px;
+    z-index: 2;
+    border-radius: 2em;
+}
+ #log .message {
+   	 border: 0.5rem solid hsl(0,100%,25%);
+   	 text-align:left;
+   	 margin-top: 2.2em;
+   	 display: inline-block;
+     height: auto;
+     background-color: {background_color};
+     z-index: 0;
+     text-shadow: none;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     padding: 0.4em 0.6em;
+     font-family: var(--fontFAMILY);
+     letter-spacing: 1px;
+     color: {text_color};
+     border-radius: 1.25em;
+   	word-wrap: break-word;
+}
+ .badge {
+     display: inline-block;
+     margin-right: 0.2em;
+     position: relative;
+     height: 1em;
+     vertical-align: middle;
+     top: -0.1em;
+   	filter: grayscale(100%);
+}
+ .name {
+     text-shadow:none;
+}
